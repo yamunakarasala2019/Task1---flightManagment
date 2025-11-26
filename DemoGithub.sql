@@ -10,7 +10,7 @@ destination varchar(25),
 startdate datetime,
 enddate datetime
 );
-
+ -- insertin data into flight table
 insert into flight values(1,'Air India','HYD','CHN','2025-10-18 06:00:00','2025-10-18 08:00:00'),
 (2,'Air India','HYD','CHN','2025-10-28 06:00:00','2025-10-28 08:00:00'),
 (3,'Indigo','CHN','MUMBAI','2025-11-18 06:00:00','2025-11-18 08:00:00'),
@@ -40,6 +40,7 @@ select * from flight where source='HYD' order by startdate desc;
 -- count no.of flight going to chennai  --count, where
 
 select destination, count(*) as flightcount from flight group by destination order by flightcount;
+
 
 select * from flight limit 2 offset 3;
 
